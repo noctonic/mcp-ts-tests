@@ -1,0 +1,1624 @@
+
+> model-context-protocol-test@1.0.0 test
+> node --experimental-vm-modules node_modules/.bin/jest --coverage
+
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+ts-jest[ts-jest-transformer] (WARN) Define `ts-jest` config under `globals` is deprecated. Please do
+transform: {
+    <transform_regex>: ['ts-jest', { /* ts-jest config goes here in Jest */ }],
+},
+See more at https://kulshekhar.github.io/ts-jest/docs/getting-started/presets#advanced
+(node:55943) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55946) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55941) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55945) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55944) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55942) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:55947) ExperimentalWarning: VM Modules is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS tests/prompts.test.ts (7.854 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8083
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Prompt Listing ===
+
+      at Object.<anonymous> (tests/prompts.test.ts:48:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 1, method: 'prompts/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          prompts: [
+            {
+              name: 'code_review',
+              description: 'Code review prompt',
+              arguments: [
+                { name: 'language', required: true },
+                { name: 'code', required: true }
+              ]
+            },
+            {
+              name: 'slow_prompt',
+              description: 'Slow prompt',
+              arguments: [ { name: 'message', required: true } ]
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Prompt Retrieval ===
+
+      at Object.<anonymous> (tests/prompts.test.ts:80:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'prompts/get',
+        params: {
+          name: 'code_review',
+          arguments: { language: 'python', code: 'print("hello")' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        result: {
+          description: 'Code review prompt',
+          messages: [
+            {
+              role: 'user',
+              content: {
+                type: 'text',
+                text: 'Please review this python code:\nprint("hello")'
+              }
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Prompt Retrieval with Progress ===
+
+      at Object.<anonymous> (tests/prompts.test.ts:104:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'prompts/get',
+        params: {
+          _meta: { progressToken: 3 },
+          name: 'slow_prompt',
+          arguments: { message: 'hello' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 1, total: 5, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 2, total: 5, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 3, total: 5, message: 'Step 3' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 4, total: 5, message: 'Step 4' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 5, total: 5, message: 'Step 5' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        result: {
+          description: 'Slow prompt',
+          messages: [ { role: 'user', content: { type: 'text', text: 'hello' } } ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Prompt Retrieval Cancellation ===
+
+      at Object.<anonymous> (tests/prompts.test.ts:132:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        method: 'prompts/get',
+        params: {
+          _meta: { progressToken: 4 },
+          name: 'slow_prompt',
+          arguments: { message: 'cancel' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/cancelled',
+        params: { requestId: 4, reason: 'User requested cancellation' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 4, progress: 1, total: 5, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 4, progress: 2, total: 5, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Prompt List Changed Notifications ===
+
+      at Object.<anonymous> (tests/prompts.test.ts:164:13)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', method: 'notifications/prompts/list_changed' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+PASS tests/serverutilites.test.ts (7.907 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8086
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Completion Request ===
+
+      at Object.<anonymous> (tests/serverutilites.test.ts:50:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        method: 'completion/complete',
+        params: {
+          ref: { type: 'ref/prompt', name: 'code_review' },
+          argument: { name: 'language', value: 'py' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          completion: {
+            values: [ 'python', 'pytorch', 'pyside' ],
+            total: 3,
+            hasMore: false
+          }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Logging Level and Messages ===
+
+      at Object.<anonymous> (tests/serverutilites.test.ts:72:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'logging/setLevel',
+        params: { level: 'info' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 2, result: {} }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/message',
+        params: { level: 'info', logger: 'test', data: { msg: 'a' } }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/message',
+        params: { level: 'error', logger: 'test', data: { msg: 'b' } }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'logging/setLevel',
+        params: { level: 'error' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 3, result: {} }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/message',
+        params: { level: 'error', logger: 'test', data: { msg: 'd' } }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Paginated Resource Listing ===
+
+      at Object.<anonymous> (tests/serverutilites.test.ts:106:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 4, method: 'resources/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        result: {
+          resources: [ { uri: 'file:///one', name: 'one' } ],
+          nextCursor: 'next'
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        method: 'resources/list',
+        params: { cursor: 'next' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        result: { resources: [ { uri: 'file:///two', name: 'two' } ] }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+PASS tests/roots.test.ts (7.9 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8084
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Root Listing ===
+
+      at Object.<anonymous> (tests/roots.test.ts:47:13)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 0, method: 'roots/list' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          roots: [
+            {
+              uri: 'file:///home/user/projects/myproject',
+              name: 'My Project'
+            }
+          ]
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Root List Changed Notifications ===
+
+      at Object.<anonymous> (tests/roots.test.ts:65:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/roots/list_changed' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 1, method: 'roots/list' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          roots: [ { uri: 'file:///home/user/projects/newroot', name: 'New Root' } ]
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+PASS tests/sampling.test.ts (8.019 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8085
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Successful Sampling Flow ===
+
+      at Object.<anonymous> (tests/sampling.test.ts:57:13)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'sampling/createMessage',
+        params: {
+          messages: [
+            {
+              role: 'user',
+              content: { type: 'text', text: 'What is the capital of France?' }
+            }
+          ],
+          modelPreferences: {
+            hints: [ { name: 'claude-3-sonnet' } ],
+            intelligencePriority: 0.8,
+            speedPriority: 0.5
+          },
+          systemPrompt: 'You are a helpful assistant.',
+          maxTokens: 100
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          role: 'assistant',
+          content: { type: 'text', text: 'The capital of France is Paris.' },
+          model: 'claude-3-sonnet-20240307',
+          stopReason: 'endTurn'
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Sampling Error Handling ===
+
+      at Object.<anonymous> (tests/sampling.test.ts:103:13)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        method: 'sampling/createMessage',
+        params: {
+          messages: [
+            {
+              role: 'user',
+              content: { type: 'text', text: 'What is the capital of France?' }
+            }
+          ],
+          maxTokens: 100
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        error: { code: -1, message: 'MCP error -1: User rejected sampling request' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Sampling with Progress ===
+
+      at Object.<anonymous> (tests/sampling.test.ts:141:13)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'sampling/createMessage',
+        params: {
+          _meta: { progressToken: 'abc123' },
+          messages: [ { role: 'user', content: { type: 'text', text: 'Say hello' } } ],
+          maxTokens: 50
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 'abc123', progress: 0.5, total: 1 }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 'abc123', progress: 1, total: 1 }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        result: {
+          role: 'assistant',
+          content: { type: 'text', text: 'hello' },
+          model: 'claude-3-sonnet-20240307',
+          stopReason: 'endTurn'
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Sampling Cancellation ===
+
+      at Object.<anonymous> (tests/sampling.test.ts:191:13)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'sampling/createMessage',
+        params: {
+          _meta: { progressToken: 3 },
+          messages: [ { role: 'user', content: { type: 'text', text: 'Cancel me' } } ],
+          maxTokens: 50
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/cancelled',
+        params: { requestId: 3, reason: 'User requested cancellation' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 0.5, total: 1, message: 'Step 1' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+PASS tests/tools.test.ts (8.734 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8082
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Tool Listing ===
+
+      at Object.<anonymous> (tests/tools.test.ts:48:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 1, method: 'tools/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          tools: [
+            {
+              name: 'get_weather',
+              description: 'Get weather information',
+              inputSchema: {
+                type: 'object',
+                properties: { location: { type: 'string', description: 'Location' } },
+                required: [ 'location' ],
+                additionalProperties: false,
+                '$schema': 'http://json-schema.org/draft-07/schema#'
+              }
+            },
+            {
+              name: 'slow_echo',
+              description: 'Echo text with delay',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  message: { type: 'string' },
+                  delay: { type: 'number', default: 500 }
+                },
+                required: [ 'message' ],
+                additionalProperties: false,
+                '$schema': 'http://json-schema.org/draft-07/schema#'
+              }
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Tool List Changed Notifications ===
+
+      at Object.<anonymous> (tests/tools.test.ts:92:13)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', method: 'notifications/tools/list_changed' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 2, method: 'tools/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        result: {
+          tools: [
+            {
+              name: 'get_weather',
+              description: 'Get weather information',
+              inputSchema: {
+                type: 'object',
+                properties: { location: { type: 'string', description: 'Location' } },
+                required: [ 'location' ],
+                additionalProperties: false,
+                '$schema': 'http://json-schema.org/draft-07/schema#'
+              }
+            },
+            {
+              name: 'slow_echo',
+              description: 'Echo text with delay',
+              inputSchema: {
+                type: 'object',
+                properties: {
+                  message: { type: 'string' },
+                  delay: { type: 'number', default: 500 }
+                },
+                required: [ 'message' ],
+                additionalProperties: false,
+                '$schema': 'http://json-schema.org/draft-07/schema#'
+              }
+            },
+            {
+              name: 'ping',
+              description: 'Ping tool',
+              inputSchema: { type: 'object' }
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Tool Invocation With Arguments ===
+
+      at Object.<anonymous> (tests/tools.test.ts:146:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'tools/call',
+        params: { name: 'get_weather', arguments: { location: 'New York' } }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        result: {
+          content: [
+            {
+              type: 'text',
+              text: 'Current weather in New York:\n' +
+                'Temperature: 72°F\n' +
+                'Conditions: Partly cloudy'
+            }
+          ],
+          isError: false
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Tool Invocation Without Arguments ===
+
+      at Object.<anonymous> (tests/tools.test.ts:165:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        method: 'tools/call',
+        params: { name: 'ping' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        result: { content: [ { type: 'text', text: 'pong' } ] }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Tool Call with Progress ===
+
+      at Object.<anonymous> (tests/tools.test.ts:181:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        method: 'tools/call',
+        params: {
+          _meta: { progressToken: 5 },
+          name: 'slow_echo',
+          arguments: { message: 'hello', delay: 500 }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 1, total: 5, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 2, total: 5, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 3, total: 5, message: 'Step 3' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 4, total: 5, message: 'Step 4' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 5, total: 5, message: 'Step 5' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        result: { content: [ { type: 'text', text: 'hello' } ] }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Tool Call Cancellation ===
+
+      at Object.<anonymous> (tests/tools.test.ts:201:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 6,
+        method: 'tools/call',
+        params: {
+          _meta: { progressToken: 6 },
+          name: 'slow_echo',
+          arguments: { message: 'cancel', delay: 1000 }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 1, total: 5, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 2, total: 5, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 3, total: 5, message: 'Step 3' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 4, total: 5, message: 'Step 4' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/cancelled',
+        params: { requestId: 6, reason: 'User requested cancellation' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 5, total: 5, message: 'Step 5' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+PASS tests/templates.test.ts (11.035 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8081
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Templates Listing ===
+
+      at Object.<anonymous> (tests/templates.test.ts:49:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 1, method: 'resources/templates/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          resourceTemplates: [
+            {
+              name: 'file-template',
+              uriTemplate: 'http://example.com/{+path}',
+              mimeType: 'application/octet-stream'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Template List Changed Notifications ===
+
+      at Object.<anonymous> (tests/templates.test.ts:67:13)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', method: 'notifications/resources/list_changed' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Template Reading ===
+
+      at Object.<anonymous> (tests/templates.test.ts:77:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'resources/read',
+        params: { uri: 'http://example.com/project/src/main.rs' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        result: {
+          contents: [
+            {
+              uri: 'http://example.com/project/src/main.rs',
+              mimeType: 'text/x-rust',
+              text: 'fn main() {\n    println!("Hello world!");\n}'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Template Read with Progress ===
+
+      at Object.<anonymous> (tests/templates.test.ts:95:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'resources/read',
+        params: {
+          _meta: { progressToken: 3 },
+          uri: 'http://example.com/slow/data.txt'
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 1, total: 3, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 2, total: 3, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 3, progress: 3, total: 3, message: 'Step 3' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        result: {
+          contents: [
+            {
+              uri: 'http://example.com/slow/data.txt',
+              mimeType: 'text/plain',
+              text: 'slow resource'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Template Read Cancellation ===
+
+      at Object.<anonymous> (tests/templates.test.ts:117:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        method: 'resources/read',
+        params: { uri: 'http://example.com/slow/data.txt' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/cancelled',
+        params: { requestId: 4, reason: 'User aborted' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+PASS tests/resources.test.ts (11.919 s)
+  ● Console
+
+    console.log
+      SSE server listening on port 8080
+
+      at Server.log (server/index.ts:246:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        method: 'initialize',
+        params: {
+          protocolVersion: '2025-03-26',
+          capabilities: { roots: { listChanged: true }, sampling: {} },
+          clientInfo: { name: 'test-sse-client', version: '1.0.0' }
+        }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 0,
+        result: {
+          protocolVersion: '2025-03-26',
+          capabilities: {
+            logging: {},
+            resources: { subscribe: true, listChanged: true },
+            sampling: {},
+            tools: { listChanged: true },
+            prompts: { listChanged: true }
+          },
+          serverInfo: { name: 'test-sse-server', version: '1.0.0' }
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', method: 'notifications/initialized' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      === Resource Listing ===
+
+      at Object.<anonymous> (tests/resources.test.ts:50:13)
+
+    console.log
+      Server Received: { jsonrpc: '2.0', id: 1, method: 'resources/list' }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 1,
+        result: {
+          resources: [
+            {
+              uri: 'file:///project/src/main.rs',
+              name: 'main-rs',
+              mimeType: 'text/x-rust'
+            },
+            {
+              uri: 'file:///slow/data.txt',
+              name: 'slow-resource',
+              mimeType: 'text/plain'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource List Changed Notifications ===
+
+      at Object.<anonymous> (tests/resources.test.ts:69:13)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', method: 'notifications/resources/list_changed' }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource Reading ===
+
+      at Object.<anonymous> (tests/resources.test.ts:79:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        method: 'resources/read',
+        params: { uri: 'file:///project/src/main.rs' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 2,
+        result: {
+          contents: [
+            {
+              uri: 'file:///project/src/main.rs',
+              mimeType: 'text/x-rust',
+              text: 'fn main() {\n    println!("Hello world!");\n}'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource Subscription ===
+
+      at Object.<anonymous> (tests/resources.test.ts:97:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 3,
+        method: 'resources/subscribe',
+        params: { uri: 'file:///project/src/main.rs' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 3, result: {} }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource Updated ===
+
+      at Object.<anonymous> (tests/resources.test.ts:107:13)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/resources/updated',
+        params: { uri: 'file:///project/src/main.rs' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 4,
+        method: 'resources/unsubscribe',
+        params: { uri: 'file:///project/src/main.rs' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: { jsonrpc: '2.0', id: 4, result: {} }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource Read with Progress ===
+
+      at Object.<anonymous> (tests/resources.test.ts:116:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        method: 'resources/read',
+        params: { _meta: { progressToken: 5 }, uri: 'file:///slow/data.txt' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 1, total: 3, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 2, total: 3, message: 'Step 2' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 5, progress: 3, total: 3, message: 'Step 3' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        id: 5,
+        result: {
+          contents: [
+            {
+              uri: 'file:///slow/data.txt',
+              mimeType: 'text/plain',
+              text: 'slow resource'
+            }
+          ]
+        }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+    console.log
+      === Resource Read Cancellation ===
+
+      at Object.<anonymous> (tests/resources.test.ts:138:13)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        id: 6,
+        method: 'resources/read',
+        params: { _meta: { progressToken: 6 }, uri: 'file:///slow/data.txt' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Server Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/cancelled',
+        params: { requestId: 6, reason: 'User requested cancellation' }
+      }
+
+      at SSEServerTransport.log [as onmessage] (server/index.ts:25:15)
+
+    console.log
+      Client Received: {
+        jsonrpc: '2.0',
+        method: 'notifications/progress',
+        params: { progressToken: 6, progress: 1, total: 3, message: 'Step 1' }
+      }
+
+      at SSEClientTransport.log [as onmessage] (client/index.ts:14:15)
+
+-----------|---------|----------|---------|---------|-----------------------------------
+File       | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s                 
+-----------|---------|----------|---------|---------|-----------------------------------
+All files  |   91.72 |    59.09 |    90.9 |   92.91 |                                   
+ client    |   95.65 |      100 |    90.9 |     100 |                                   
+  index.ts |   95.65 |      100 |    90.9 |     100 |                                   
+ server    |   90.98 |    59.09 |    90.9 |   91.66 |                                   
+  index.ts |   90.98 |    59.09 |    90.9 |   91.66 | 37-38,109,167,194,204,218,239-240 
+-----------|---------|----------|---------|---------|-----------------------------------
+
+Test Suites: 7 passed, 7 total
+Tests:       32 passed, 32 total
+Snapshots:   0 total
+Time:        12.661 s
+Ran all test suites.
