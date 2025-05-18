@@ -5,7 +5,10 @@ We build a test-client and test-server.
 
 We connect test-client to test-server via SSE on port and series of test are performed and the results are collected and displayed.
 
+See [MCP Feature Matrix Wiki](https://github.com/noctonic/mcp-feature-matrix/wiki) for more details about features that are tested.
+
 ## Testing
-Run `npm install` then `npm test` to execute the Jest suite. Tests rely on Node's ECMAScript module
-support, so Node is run with the `--experimental-vm-modules` flag automatically.
+Run `npm install` then `npm test` to execute the Jest suite. 
+
+Tests rely on Node's ECMAScript module support, so Node is run with the `--experimental-vm-modules` flag automatically.
 
