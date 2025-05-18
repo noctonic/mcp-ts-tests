@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "outDir": "dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node16",
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "include": [
+    "server/**/*",
+    "client/**/*",
+    "tests/**/*",
+    "test/**/*",
+    "types.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
+
